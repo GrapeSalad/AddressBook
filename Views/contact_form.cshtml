@@ -2,10 +2,10 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-<h3>Here you can add a new contact.</h3>
+<h3>Here you can add a new contact</h3>
 
 <div id="contactForm">
-  <p>Click anywhere to show the form, then fill out as much as you know:</p>
+  <p><span class="returnToNormal clickAnywhere">Click anywhere to show the form</span></p>
   <form class="form-control" action="/contact/new" method="post">
     <label for="fName">First Name:</label>
     <input type="text" id="fName" name="fName"></br>
@@ -25,4 +25,18 @@
     <input type="text" id="emailAddress" name="emailAddress"></br>
     <button type="submit" name="button">Add 'em!</button>
   </form>
+</div>
+
+<div id="contactGuidelines">
+  <ul>
+    <li>Here are a few rules you can follow to help enter correct information:</li>
+    <li> - First Name MUST be entered, and MUST NOT be numbers</li>
+    <li> - Last Name should be letters only</li>
+    <li> - Phone Number should be numbers and include area-code</li>
+    <li> - Street Address follows this template: 1437 Cutoff Ln</li>
+    <li> - City should be letters only</li>
+    <li> - State should be two letters</li>
+    <li> - Zip Code MUST be numbers</li>
+    <li> - Email address follows this template: gottaHaveJorts@whoNeedsPants.com</li>
+  </ul>
 </div>

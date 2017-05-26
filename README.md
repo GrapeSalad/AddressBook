@@ -45,6 +45,10 @@ Open a web browser, and type "localhost:5004".
 To view the code you can open the files using your editor of choice.
 If you have the editor path set in your system properties you will be able to open them through PowerShell.
 
+## Known Bugs
+
+If a contact is deleted, and it is not the most recently added contact, clicking on the other contacts in the list return an Internal Server Error.
+
 ## Support and Contact Details
 
 If you have any issues, questions, ideas, concerns, or contribution ideas please contact any of the contributors via Github.

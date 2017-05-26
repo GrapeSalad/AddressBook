@@ -13,7 +13,7 @@ namespace AddressBook
         List<Contact> allContacts = Contact.GetAll();
         return View["contacts_home.cshtml", allContacts];
       };
-      
+
       Get["/contact"] = _ => {
         return View["contact_form.cshtml"];
       };
@@ -40,8 +40,8 @@ namespace AddressBook
         Contact contact = Contact.Find(parameters.id);
         return View["contact_details.cshtml", contact];
       };
-      Post["/contact/{id}"] = parameters => {
-        Contact contact = Contact.Find(parameters.id);
+      Post["/contact"] = parameters => {
+        Contact contact = Contact.Find(Request.Form["contactId"]);
         contact.Remove();
         List<Contact> allContacts = Contact.GetAll();
         return View["contacts_home.cshtml", allContacts];

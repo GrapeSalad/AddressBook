@@ -25,6 +25,7 @@
 </div>
 <p><span class="newContact"><a href="/contact">Add new Contact!</a></span></p>
 <p><span class="backHome"><a href="/">Back to the Home Page</a></span></p>
-<form action="/contact/@Model.GetId()" method="post">
+<form action="/contact" method="post">
+  <input id="contactId" name="contactId" type='hidden' value='@Model.GetId()'>
   <button id="deleteContact" type="submit" name="button">Delete This Contact</button>
 </form>

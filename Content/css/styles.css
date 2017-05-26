@@ -49,10 +49,10 @@ h3 {
   margin: auto;
   width: 190px;
   text-align: right;
-  float: right;
+  float: left;
   position: relative;
   bottom: 60px;
-  right: 30%;
+  left: 60%;
 }
 
 .backHome {
@@ -60,17 +60,35 @@ h3 {
   margin: auto;
   width: 190px;
   text-align: right;
-  float: right;
+  float: left;
   position: relative;
   bottom: 50px;
-  right: 30%;
-  clear: right;
+  left: 60%;
+  clear: left;
 }
 
 #contactForm {
-  margin: 0 20%;
+  margin: 0 auto;
   padding: 10px;
   display: inline-block;
+  width: 500px;
+}
+
+.clickAnywhere {
+  font-size: 40px;
+  color: #E8ABAA;
+}
+
+#contactGuidelines {
+  margin: 0 10px 0 0;
+  padding: 50px 5px 10px;
+  float: right;
+  width: 550px;
+  height: 400px;
+}
+
+#contactGuidelines li {
+  list-style: none;
 }
 
 .form-control{
@@ -90,19 +108,23 @@ h3 {
 }
 
 #deleteContact {
-  float: right;
-  clear: right;
+  float: left;
+  clear: left;
   position: relative;
-  bottom: 160px;
-  right: 30%;
+  bottom: 40px;
+  left: 60%;
 }
 
 #clearAll {
-  float: right;
-  clear: right;
+  float: left;
+  clear: left;
   position: relative;
   bottom: 50px;
-  right: 30%;
+  left: 60%;
+}
+
+.clearedContent {
+  width: 400px;
 }
 
 #contactForm button {
