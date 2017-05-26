@@ -8,10 +8,18 @@
   <p>Contact Details:</p>
   <ul>
     <li>Name: @Model.GetName()</li>
-    <li>Phone Number: @Model.GetPhoneNumber()</li>
-    <li>Street Address: @Model.GetStreetAddress()</li>
-    <li>City, State Zip: @Model.GetCity(), @Model.GetState() @Model.GetZipCode()</li>
-    <li>Email: @Model.GetEmailAddress()</li>
+    @if(@Model.GetPhoneNumber() != ""){
+      <li>Phone Number: @Model.GetPhoneNumber()</li>
+    }
+    @if(@Model.GetStreetAddress() != ""){
+      <li>Street Address: @Model.GetStreetAddress()</li>
+    }
+    @if(@Model.GetCityStateZip() != ""){
+      <li>City State Zip: @Model.GetCityStateZip()</li>
+    }
+    @if(@Model.GetEmailAddress() != ""){
+      <li>Email: @Model.GetEmailAddress()</li>
+    }
   </ul>
 </div>
 <p><span class="newContact"><a href="/contact">Add new Contact!</a></span></p>

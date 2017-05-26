@@ -21,7 +21,8 @@ This web application will allow a user to create an Address Book that will save 
 | behavior | input | output |
 |---|---|---|
 | First and last names are concatenated | Drewpy and Pie are entered | "Drewpy Pie" |
-| Zip Code must be a number | h4lso | "Invalid Entry, Please Try Again"|
+| Zip Code must be a number | "h4lso" | "Invalid Entry, Please Try Again" |
+| First name must be entered, and must not contain numbers | "d4v1d", or left blank | "Invalid Entry, Please Try Again" |
 | Delete single entry | click on link in list of contact names, then click delete this contact | list of contact names is shown missing the deleted contact |
 | Delete all contacts | click delete all contacts button | native home-page will be displayed due to the list being empty |
 

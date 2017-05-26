@@ -42,18 +42,11 @@ namespace AddressBook.Objects
     {
       return _streetAddress;
     }
-    public string GetCity()
+    public string GetCityStateZip()
     {
-      return _city;
+      return _city + " " + _state + " " +_zipCode;
     }
-    public string GetState()
-    {
-      return _state;
-    }
-    public int GetZipCode()
-    {
-      return _zipCode;
-    }
+
     public string GetEmailAddress()
     {
       return _emailAddress;

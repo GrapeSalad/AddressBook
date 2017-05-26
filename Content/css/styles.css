@@ -100,9 +100,9 @@ h3 {
 #clearAll {
   float: right;
   clear: right;
-  position: fixed;
-  top: 190px;
-  right: 35%;
+  position: relative;
+  bottom: 50px;
+  right: 30%;
 }
 
 #contactForm button {
