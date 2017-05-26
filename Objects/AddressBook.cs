@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace AddressBook.Objects
 {
   public class Contact
@@ -9,10 +12,11 @@ namespace AddressBook.Objects
     private string _streetAddress;
     private string _city;
     private string _state;
+    private int _zipCode;
     private string _emailAddress;
-    private int _id;
-
-    public Contact(string fName, string lName, string phoneNumber, string streetAddress, string city, string state, string emailAddress)
+    private int _id;//to be implemented
+//CONSTRUCTING
+    public Contact(string fName, string lName, string phoneNumber, string streetAddress, string city, string state, int zipCode, string emailAddress)
     {
       _fName = fName;
       _lName = lName;
@@ -20,14 +24,15 @@ namespace AddressBook.Objects
       _streetAddress = streetAddress;
       _city = city;
       _state = state;
+      _zipCode = zipCode;
       _emailAddress = emailAddress;
-      _contact.Add(this);
-      _id = _contact.Count;//To be implemented with deletion of contact
+      _contacts.Add(this);
+      _id = _contacts.Count;//To be implemented with deletion of contact
     }
-
+//RETURNING
     public string GetName()
     {
-      return _fName + _lName;
+      return _fName + " " + _lName;
     }
     public string GetPhoneNumber()
     {
@@ -45,11 +50,15 @@ namespace AddressBook.Objects
     {
       return _state;
     }
+    public int GetZipCode()
+    {
+      return _zipCode;
+    }
     public string GetEmailAddress()
     {
       return _emailAddress;
     }
-    public int GetId
+    public int GetId()
     {
       return _id;
     }
@@ -57,13 +66,16 @@ namespace AddressBook.Objects
     {
       return _contacts;
     }
+//REMOVING
     public static void Clear()
     {
       _contacts.Clear();
     }
+
+//FINDING  --TO BE USED LATER
     public static Contact Find(int searchId)
     {
-      return _artists[searchId-1];
+      return _contacts[searchId-1];
     }
   }
 }
