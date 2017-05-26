@@ -27,7 +27,7 @@ namespace AddressBook
 
       Get["/contact/{id}"] = parameters => {
         Contact contact = Contact.Find(parameters.id);
-        return View["/contact_details.cshtml", contact];
+        return View["contact_details.cshtml", contact];
       };
 
       Post["/contact/{id}"] = parameters => {
