@@ -46,7 +46,6 @@ namespace AddressBook.Objects
     {
       return _city + " " + _state + " " +_zipCode;
     }
-
     public string GetEmailAddress()
     {
       return _emailAddress;
