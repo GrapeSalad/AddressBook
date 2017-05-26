@@ -24,6 +24,18 @@ namespace AddressBook
         Contact.Clear();
         return View["contacts_cleared.cshtml"];
       };
+
+      Get["/contact/{id}"] = parameters => {
+        Contact contact = Contact.Find(parameters.id);
+        return View["/contact_details.cshtml", contact];
+      };
+
+      Post["/contact/{id}"] = parameters => {
+        Contact contact = Contact.Find(parameters.id);
+        contact.Remove();
+        List<Contact> allContacts = Contact.GetAll();
+        return View["contacts_home.cshtml", allContacts];
+      };
     }
   }
 }

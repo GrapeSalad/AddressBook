@@ -3,7 +3,8 @@
 }
 
 
-<h3>You created a contact!</h3>
+<h3>Hi!! This is @Model.GetName()</h3>
+
 <div class="contactDetails">
   <p>Contact Details:</p>
   <ul>
@@ -16,3 +17,6 @@
 </div>
 <p><span class="newContact"><a href="/contact">Add new Contact!</a></span></p>
 <p><span class="backHome"><a href="/">Back to the Home Page</a></span></p>
+<form action="/contact/@Model.GetId()" method="post">
+  <button id="deleteContact" type="submit" name="button">Delete This Contact</button>
+</form>

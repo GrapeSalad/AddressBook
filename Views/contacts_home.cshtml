@@ -1,32 +1,39 @@
-<h1>Welcome to your Address Book!</h1>
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
 <h3>Here you can view your current contacts, add new contacts, and clear all of your contacts.</h3>
 @if(@Model.Count == 0)
 {
-  <p>There are no Contacts!</p>
-  <p>Here is an example contact:</p>
-  <ul>
-    <li>Jon Jorts</li>
-    <li>I-(WEA)-REJ-ORTS</li>
-    <li>1437 Jorts Ln</li>
-    <li>Cutoff, OR 97211</li>
-    <li>gottaHaveJorts@whoNeedsPants.com</li>
-  </ul>
-
-  <p><a href="/contact">Add a new Contact!</a></p>
+  <p><span class="danger">There are no Contacts!</span></p>
+  <div class="contactDetails">
+    <div id="exampleContact">
+      <p>Here is an example contact:</p>
+      <ul>
+        <li>Jon Jorts</li>
+        <li>I-(WEA)-REJ-ORTS</li>
+        <li>1437 Jorts Ln</li>
+        <li>Cutoff, OR 97211</li>
+        <li>gottaHaveJorts@whoNeedsPants.com</li>
+      </ul>
+    </div>
+  </div>
+  <p><span class="newContact"><a href="/contact">Add a new Contact!</a></span></p>
 }
 @if(@Model.Count != 0)
 {
-  <!-- <p>Click on a contact to view their information:</p> -->
-  <ul>
-    @foreach (var contact in @Model)
-    {
-      <li>@contact.GetName()</li>
-    }
-  </ul>
+  <div class="contactDetails">
+    <p>Click on a contact to view their information:</p>
+    <ul>
+      @foreach (var contact in @Model)
+      {
+        <li><a href='/contact/@contact.GetId()'>@contact.GetName()</a></li>
+      }
+    </ul>
+  </div>
+  <p><span class="newContact"><a href="/contact">Add a new Contact!</a></span></p>
 
-  <p><a href="/contact">Add a new Contact!</a></p>
-
-  <form class="form-control" action="/contact/clear" method="post">
-    <button type="submit" name="button">CLEAR ALL CONTACTS</button>
+  <form action="/contact/clear" method="post">
+    <button id="clearAll" type="submit" name="button">CLEAR ALL CONTACTS</button>
   </form>
 }

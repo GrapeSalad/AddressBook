@@ -14,7 +14,7 @@ namespace AddressBook.Objects
     private string _state;
     private int _zipCode;
     private string _emailAddress;
-    private int _id;//to be implemented
+    private int _id;
 //CONSTRUCTING
     public Contact(string fName, string lName, string phoneNumber, string streetAddress, string city, string state, int zipCode, string emailAddress)
     {
@@ -27,7 +27,7 @@ namespace AddressBook.Objects
       _zipCode = zipCode;
       _emailAddress = emailAddress;
       _contacts.Add(this);
-      _id = _contacts.Count;//To be implemented with deletion of contact
+      _id = _contacts.Count;
     }
 //RETURNING
     public string GetName()
@@ -71,8 +71,11 @@ namespace AddressBook.Objects
     {
       _contacts.Clear();
     }
-
-//FINDING  --TO BE USED LATER
+    public void Remove()
+    {
+      _contacts.Remove(this);
+    }
+//FINDING
     public static Contact Find(int searchId)
     {
       return _contacts[searchId-1];

@@ -1,0 +1,117 @@
+body{
+  background: #DAD9FF;
+  margin: 0;
+  padding: 0;
+  font-family: 'Overlock', cursive;
+}
+
+.container {
+  margin: 50px;
+  background: #F7FFE2;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+p, li {
+  font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+  background: #FFD5E1;
+  height: 50px;
+  width: 600px;
+  margin: 5px auto auto;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.danger {
+  color: #FF5E5A;
+  font-size: 40px;
+  font-weight: bold;
+  float: right;
+  position: relative;
+  top: 50px;
+  right: 20%;
+}
+
+#exampleContact {
+  padding: 20px 20px 20px 40px;
+}
+
+.newContact {
+  background: url("../img/rightArrowGlitter.gif") no-repeat left center;
+  margin: auto;
+  width: 190px;
+  text-align: right;
+  float: right;
+  position: relative;
+  bottom: 60px;
+  right: 30%;
+}
+
+.backHome {
+  background: url("../img/rightArrowGlitter.gif") no-repeat left center;
+  margin: auto;
+  width: 190px;
+  text-align: right;
+  float: right;
+  position: relative;
+  bottom: 50px;
+  right: 30%;
+  clear: right;
+}
+
+#contactForm {
+  margin: 0 20%;
+  padding: 10px;
+  display: inline-block;
+}
+
+.form-control{
+  height: 100%;
+  width: 450px;
+  display: none;
+}
+
+.form-control label {
+  width: 100px;
+}
+
+.contactDetails {
+  display: inline-block;
+  margin-left: 40px;
+  padding: 10px;
+}
+
+#deleteContact {
+  float: right;
+  clear: right;
+  position: relative;
+  bottom: 160px;
+  right: 30%;
+}
+
+#clearAll {
+  float: right;
+  clear: right;
+  position: fixed;
+  top: 190px;
+  right: 35%;
+}
+
+#contactForm button {
+  float: right;
+  position: relative;
+  bottom: 120px;
+  right: 50px;
+}
+
+button:hover{
+  box-shadow: 3px 3px 5px #000;
+}
